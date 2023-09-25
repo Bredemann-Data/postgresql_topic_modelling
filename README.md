@@ -1,5 +1,5 @@
 # postgresql_topic_modelling
-"Python code that connects to a PostgreSQL database (using Psycopg2), loads book descriptions from database into a pandas data frame, and performs topic modeling.
+"This Python script connects to a PostgreSQL database using Psycopg2, fetches book descriptions from the database, and organizes them into a Pandas DataFrame. It then performs topic modeling on this data.
 
-The file script.py creates a separate table for the new topics and can only be applied to a table where topics have not been assigned yet. This file trainer a pipeline that can be saved for topic modeling.
-The file script_update.py contains a script that selects all entires where no topic has been assigned and adds the topic into the table via an UPDATE clause. It requires a pertained pipe that is stored as pipe.py in the wd.
+script.py: This script creates a dedicated table for storing the new topics. It should only be used with a table where topics have not yet been assigned. This script is responsible for training a pipeline that can later be saved for topic modeling.
+script_update.py: In this script, we select all entries where no topic has been assigned and update the table by adding the topics using an UPDATE clause. This script relies on a pre-trained pipeline stored as pipe.py in the working directory (wd) for its operation.
